@@ -1,0 +1,69 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style id="Bg">
+        body{
+            background-color: white;
+        }
+    </style>
+
+    <div id="EventDiv">
+
+        <h1 id="demo"></h1>
+        <p id="time"></p>
+        <img id="pic" src="dice-1.png" style=" height: 100px; width: 100px; ">
+      
+      </div>
+      
+    
+      <div class="button-container">
+        <button onclick="ChangeBg()" class = "hover-effect" >Change Bg</button>
+        <button onclick="ChangeText()" class = "hover-effect" >Good vibes</button>
+        <button onclick="ChangeTime()" class = "hover-effect" >Time</button>
+        <button onclick="ChangeImg()" class = "hover-effect" >Change picure</button>
+        <button onclick="RemoveImg()" class = "hover-effect" >Hide picture</button>
+        <button onclick="ShowImg()" class = "hover-effect" >Show Picture</button>
+      
+      </div>
+
+    
+      <script>
+        var lastPic = 'dice-1.png'
+
+        function ChangeBg(){
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+          function ChangeText() {
+              document.getElementById('demo').innerHTML = 'Be the best version of you!'
+          }
+
+          function ChangeTime() {
+              document.getElementById('time').innerHTML = Date()
+          }
+  
+          function ChangeImg() {
+              document.getElementById('pic').src = 'dice-6.png'
+              lastPic = 'dice-6.png'
+          }
+
+          function RemoveImg(){
+            document.getElementById("pic").style.display = "none";
+        }
+        function ShowImg(){
+            document.getElementById("pic").style.display = "block";
+        }
+      </script>
+
+      
+
+</body>
+
+</html>
